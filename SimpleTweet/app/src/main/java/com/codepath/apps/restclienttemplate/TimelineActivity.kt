@@ -50,6 +50,7 @@ class TimelineActivity : AppCompatActivity() {
         adapter = TweetsAdapter(tweets)
 
         rvTweets.layoutManager = LinearLayoutManager(this)
+        rvTweets.adapter = adapter
 
         populateHomeTimeline()
     }
