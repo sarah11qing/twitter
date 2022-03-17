@@ -29,6 +29,7 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>): RecyclerView.Adapter<TweetsAd
         // Set item views based on views and data model
         holder.tvUserName.text = tweet.user?.name
         holder.tvTweetBody.text = tweet.body
+        holder.tvTimestamp.text = tweet.getFormattedTimestamp()
 
         Glide.with(holder.itemView).load(tweet.user?.publicImageUrl).into(holder.ivProfileImage)
     }
@@ -36,6 +37,7 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>): RecyclerView.Adapter<TweetsAd
     override fun getItemCount(): Int {
         return tweets.size
     }
+
 
     // Clean all elements of the recycler
     fun clear() {
@@ -50,10 +52,11 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>): RecyclerView.Adapter<TweetsAd
     }
 
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val ivProfileImage = itemView.findViewById<ImageView>(R.id.ivProfileImage)
         val tvUserName = itemView.findViewById<TextView>(R.id.tvUsername)
         val tvTweetBody = itemView.findViewById<TextView>(R.id.tvTweetBody)
+        val tvTimestamp = itemView.findViewById<TextView>(R.id.tvTimestamp)
     }
 }
