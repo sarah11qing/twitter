@@ -13,6 +13,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:hint="What's happening?"
+        android:autofillHints="What's happening?"
         android:inputType="textMultiLine"
         android:minLines="5"
         android:layout_margin="10dp"
@@ -24,8 +25,8 @@
         android:id="@+id/btnTweet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         android:text="TWEET"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/etTweetCompose" />
 </androidx.constraintlayout.widget.ConstraintLayout>
