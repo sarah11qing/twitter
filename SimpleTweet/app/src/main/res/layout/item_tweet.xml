@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/tvTweetBody"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="4dp"
@@ -45,8 +45,9 @@
         android:id="@+id/tvTimestamp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5min"
         android:gravity="end"
+        android:text="5min"
         app:layout_constraintBottom_toBottomOf="@+id/tvUsername"
-        app:layout_constraintEnd_toEndOf="@+id/tvTweetBody" />
+        app:layout_constraintEnd_toEndOf="@+id/tvTweetBody"
+        app:layout_constraintTop_toTopOf="@+id/tvUsername" />
 </androidx.constraintlayout.widget.ConstraintLayout>

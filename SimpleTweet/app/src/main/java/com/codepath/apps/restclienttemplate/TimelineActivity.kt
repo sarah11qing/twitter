@@ -68,6 +68,7 @@ class TimelineActivity : AppCompatActivity() {
     // Handles clicks on menu item
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.compose) {
+
             // Navigate to compose screen
             val intent = Intent(this, ComposeActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE)
@@ -84,7 +85,6 @@ class TimelineActivity : AppCompatActivity() {
             val tweet = data?.getParcelableExtra("tweet") as Tweet
 
             // Update timeline
-
             // Modify the data source of tweets
             tweets.add(0, tweet)
 
